@@ -18,22 +18,20 @@ frappe.ui.form.ControlTextEditor.prototype.get_quill_options = function() {
 frappe.ui.form.ControlTextEditor.prototype.get_toolbar_options = function () {
       
     return  [
-        ['bold', 'italic', 'underline', 'strike'],        // toggled buttons
-        ['blockquote', 'code-block'],
-      
-        [{ 'header': 1 }, { 'header': 2 }],               // custom button values
-        [{ 'list': 'ordered' }, { 'list': 'bullet' }], ['task-list'],
-        [{ 'script': 'sub' }, { 'script': 'super' }],      // superscript/subscript
-        [{ 'indent': '-1' }, { 'indent': '+1' }],          // outdent/indent
-        [{ 'direction': 'rtl' }],                         // text direction
-        [{ 'size': ['small', false, 'large', 'huge'] }],  // custom dropdown
-         
-        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
-      
-        [{ 'color': [] }, { 'background': [] }],          // dropdown with defaults from theme
         [{ 'font': [] }],
+        [{ 'size': ['small', 'normal', 'large', 'huge'] }],   
+        ['bold', 'italic', 'underline', 'strike'],    
+        [{ 'color': [] }, { 'background': [] }], 
         [{ 'align': [] }],
+        [{ 'script': 'sub' }, { 'script': 'super' }],      
+        [{ 'header': 1 }, { 'header': 2 }],  
+        [{ 'header': [1, 2, 3, 4, 5, 6, false] }],
+        ['blockquote', 'code-block'],             
+        [{ 'list': 'ordered' }, { 'list': 'bullet' }], 
+        ['task-list'], 
+        [{ 'indent': '-1' }, { 'indent': '+1' }],           
+        [{ 'direction': 'rtl' }],   
         ['link', "image", 'video', 'formula'], 
-        ['clean']                                         // remove formatting button
+        ['clean']                                        
       ];
 }
